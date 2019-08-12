@@ -1,4 +1,4 @@
-package id.firdausy.rafly.ejumantik;
+package id.firdausy.rafly.ejumantik.Helper;
 
 import android.app.AlertDialog;
 import android.content.Context;

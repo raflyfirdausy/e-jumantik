@@ -7,7 +7,7 @@
     android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
     android:weightSum="100"
-    tools:context=".RegistrasiACtivity">
+    tools:context=".Universal.RegistrasiACtivity">
 
     <LinearLayout
         android:layout_width="match_parent"

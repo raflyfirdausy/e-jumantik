@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/action_dashboard"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="Dashboard" />
+
+        <item
+            android:id="@+id/action_inputData"
+            android:icon="@drawable/add"
+            android:title="Input Data" />
+
+        <item
+            android:id="@+id/action_lihat"
+            android:icon="@drawable/lihat"
+            android:title="Lihat Data" />
+
+        <item
+            android:id="@+id/action_abj"
+            android:icon="@drawable/ic_spellcheck_black_24dp"
+            android:title="Hitung ABJ" />
+
+        <item
+            android:id="@+id/action_pencegahan"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Pencegahan" />
+
+        <item
+            android:id="@+id/action_tambahAdminKader"
+            android:icon="@drawable/ic_user"
+            android:title="Tambah Admin / Kader" />
+
+        <item
+            android:id="@+id/action_ubahPassword"
+            android:icon="@drawable/ic_pass"
+            android:title="Ubah Password" />
+
+        <item
+            android:id="@+id/action_logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+
+    </group>
+</menu>
