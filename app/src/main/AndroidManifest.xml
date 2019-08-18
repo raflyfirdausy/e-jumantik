@@ -11,11 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Activity.UserMainActivity"></activity>
         <activity
-            android:name=".Admin.AdminMainActivity"
+            android:name=".Activity.AdminMainActivity"
             android:label="@string/title_activity_admin_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Universal.RegistrasiACtivity" />
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Universal.RegistrasiActivity" />
         <activity android:name=".Universal.LoginActivity" />
         <activity android:name=".Universal.SplashScreenActivity">
             <intent-filter>

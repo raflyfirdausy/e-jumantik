@@ -20,19 +20,9 @@
             android:title="Lihat Data" />
 
         <item
-            android:id="@+id/action_abj"
-            android:icon="@drawable/ic_spellcheck_black_24dp"
-            android:title="Hitung ABJ" />
-
-        <item
             android:id="@+id/action_pencegahan"
             android:icon="@drawable/ic_menu_manage"
             android:title="Pencegahan" />
-
-        <item
-            android:id="@+id/action_tambahAdminKader"
-            android:icon="@drawable/ic_user"
-            android:title="Tambah Admin" />
 
         <item
             android:id="@+id/action_ubahPassword"

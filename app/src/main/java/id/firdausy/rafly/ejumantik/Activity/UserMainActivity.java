@@ -1,4 +1,4 @@
-package id.firdausy.rafly.ejumantik.Admin;
+package id.firdausy.rafly.ejumantik.Activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -20,29 +21,27 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog;
 
-import id.firdausy.rafly.ejumantik.FragmentAdmin.DashboardAdminFragment;
-import id.firdausy.rafly.ejumantik.FragmentAdmin.HitungAbjAdminFragment;
-import id.firdausy.rafly.ejumantik.FragmentAdmin.InputDataAdminFragment;
-import id.firdausy.rafly.ejumantik.FragmentAdmin.LihatDataAdminFragment;
-import id.firdausy.rafly.ejumantik.FragmentAdmin.PencegahanAdminFragment;
-import id.firdausy.rafly.ejumantik.FragmentAdmin.TambahAdminKaderFragment;
+import id.firdausy.rafly.ejumantik.FragmentUser.DashboardUserFragment;
+import id.firdausy.rafly.ejumantik.FragmentUser.InputDataUserFragment;
+import id.firdausy.rafly.ejumantik.FragmentUser.LihatDataUserFragment;
+import id.firdausy.rafly.ejumantik.FragmentUser.PencegahanUserFragment;
 import id.firdausy.rafly.ejumantik.Helper.Bantuan;
 import id.firdausy.rafly.ejumantik.R;
 import id.firdausy.rafly.ejumantik.Universal.LoginActivity;
 import id.firdausy.rafly.ejumantik.Universal.UbahPasswordFragment;
 
-public class AdminMainActivity extends AppCompatActivity
+public class UserMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     boolean tekanKembaliUntukKeluar = false;
-    private Context context = AdminMainActivity.this;
-    private FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+    private Context context = UserMainActivity.this;
+    private FirebaseAuth firebaseAuth;
+    private DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_main);
+        setContentView(R.layout.activity_main_user);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("E Jumantik");
@@ -65,7 +64,7 @@ public class AdminMainActivity extends AppCompatActivity
                 .beginTransaction()
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                 .replace(R.id.fl_content,
-                        new DashboardAdminFragment(),
+                        new DashboardUserFragment(),
                         "action_dashboard")
                 .commit();
     }
@@ -92,45 +91,32 @@ public class AdminMainActivity extends AppCompatActivity
         }
     }
 
-
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int id = menuItem.getItemId();
         FragmentTransaction FT = getSupportFragmentManager()
                 .beginTransaction()
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
 
         if (id == R.id.action_dashboard) {
             FT.replace(R.id.fl_content,
-                    new DashboardAdminFragment(),
+                    new DashboardUserFragment(),
                     "action_dashboard")
                     .commit();
         } else if (id == R.id.action_inputData) {
             FT.replace(R.id.fl_content,
-                    new InputDataAdminFragment(),
+                    new InputDataUserFragment(),
                     "action_inputData")
                     .commit();
         } else if (id == R.id.action_lihat) {
             FT.replace(R.id.fl_content,
-                    new LihatDataAdminFragment(),
+                    new LihatDataUserFragment(),
                     "action_lihat")
-                    .commit();
-        } else if (id == R.id.action_abj) {
-            FT.replace(R.id.fl_content,
-                    new HitungAbjAdminFragment(),
-                    "action_abj")
                     .commit();
         } else if (id == R.id.action_pencegahan) {
             FT.replace(R.id.fl_content,
-                    new PencegahanAdminFragment(),
+                    new PencegahanUserFragment(),
                     "action_pencegahan")
-                    .commit();
-        } else if (id == R.id.action_tambahAdminKader) {
-            FT.replace(R.id.fl_content,
-                    new TambahAdminKaderFragment(),
-                    "action_tambahAdminKader")
                     .commit();
         } else if (id == R.id.action_ubahPassword) {
             FT.replace(R.id.fl_content,
