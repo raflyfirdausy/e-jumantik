@@ -117,7 +117,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/tv_totalKader"
+                                    android:id="@+id/tvBerapaKali"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="monospace"
@@ -177,7 +177,8 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_centerInParent="true"
-                                    app:srcCompat="@drawable/add" />
+                                    app:srcCompat="@drawable/add"
+                                    tools:ignore="VectorDrawableCompat" />
                             </RelativeLayout>
                         </LinearLayout>
 

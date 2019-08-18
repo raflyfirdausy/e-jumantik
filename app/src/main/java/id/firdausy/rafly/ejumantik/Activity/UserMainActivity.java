@@ -17,8 +17,11 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.ontbee.legacyforks.cn.pedant.SweetAlert.SweetAlertDialog;
 
 import id.firdausy.rafly.ejumantik.FragmentUser.DashboardUserFragment;
@@ -58,7 +61,22 @@ public class UserMainActivity extends AppCompatActivity
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
         final TextView tv_namaPengguna = navigationView.getHeaderView(0).findViewById(R.id.headerNama);
-        TextView tv_emailPengguna = navigationView.getHeaderView(0).findViewById(R.id.headerEmail);
+        final TextView tv_emailPengguna = navigationView.getHeaderView(0).findViewById(R.id.headerEmail);
+
+        databaseReference.child("user")
+                .child(firebaseAuth.getCurrentUser().getUid())
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        tv_namaPengguna.setText(dataSnapshot.child("namaLengkap").getValue(String.class));
+                        tv_emailPengguna.setText(firebaseAuth.getCurrentUser().getEmail());
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        new Bantuan(context).swal_error(databaseError.getMessage());
+                    }
+                });
 
         getSupportFragmentManager()
                 .beginTransaction()
