@@ -192,6 +192,9 @@ public class InputDataUserFragment extends Fragment implements TextWatcher {
 
         inputModel.setWaktu(String.valueOf(new Date().getTime()));
 
+        inputModel.setTotalKontainer(tvKontainerDiPeriksa.getText().toString());
+        inputModel.setTotalPositifJentik(tvTotalPositifJentik.getText().toString());
+
 
         databaseReference.child("input")
                 .child(firebaseAuth.getCurrentUser().getUid())

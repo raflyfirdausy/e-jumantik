@@ -26,6 +26,41 @@ public class InputModel implements Serializable {
 
     String waktu;
 
+    String totalKontainer, totalPositifJentik;
+    String keyPemilik, keyInputan;
+
+    public String getKeyPemilik() {
+        return keyPemilik;
+    }
+
+    public void setKeyPemilik(String keyPemilik) {
+        this.keyPemilik = keyPemilik;
+    }
+
+    public String getKeyInputan() {
+        return keyInputan;
+    }
+
+    public void setKeyInputan(String keyInputan) {
+        this.keyInputan = keyInputan;
+    }
+
+    public String getTotalKontainer() {
+        return totalKontainer;
+    }
+
+    public void setTotalKontainer(String totalKontainer) {
+        this.totalKontainer = totalKontainer;
+    }
+
+    public String getTotalPositifJentik() {
+        return totalPositifJentik;
+    }
+
+    public void setTotalPositifJentik(String totalPositifJentik) {
+        this.totalPositifJentik = totalPositifJentik;
+    }
+
     public String getJmlBak() {
         return JmlBak;
     }
