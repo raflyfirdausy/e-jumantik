@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/ivHuruf"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNamaKepalaKeluarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Kepala Keluarga"
+                android:textColor="@color/black_tua_hehe"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNomerHp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nomer Hp"
+                android:textColor="@color/black_tua_hehe" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

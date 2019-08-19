@@ -1,4 +1,4 @@
-package id.firdausy.rafly.ejumantik.User;
+package id.firdausy.rafly.ejumantik.Activity;
 
 import android.content.Context;
 import android.os.Bundle;

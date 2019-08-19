@@ -11,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".User.DetailInputanActivity"></activity>
+        <activity android:name=".Activity.LihatDataUserFragmentActivity"></activity>
+        <activity android:name=".Activity.InputDataAdminActivity" />
+        <activity android:name=".Activity.DetailInputanActivity" />
         <activity android:name=".Activity.UserMainActivity" />
         <activity
             android:name=".Activity.AdminMainActivity"

@@ -13,10 +13,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import id.firdausy.rafly.ejumantik.Activity.DetailInputanActivity;
 import id.firdausy.rafly.ejumantik.Helper.Waktu;
 import id.firdausy.rafly.ejumantik.Model.InputModel;
 import id.firdausy.rafly.ejumantik.R;
-import id.firdausy.rafly.ejumantik.User.DetailInputanActivity;
 
 public class LihatDataUserAdapter extends RecyclerView.Adapter<LihatDataUserAdapter.ViewHolder> {
     private Context context;

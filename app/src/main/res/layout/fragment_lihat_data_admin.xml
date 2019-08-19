@@ -55,12 +55,17 @@
 
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/lv_konten"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvKonten"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvDataTidakDitemukan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp" />
+        android:gravity="center"
+        android:text="Data Tidak Ditemukan"
+        android:visibility="gone" />
 
 </LinearLayout>
