@@ -79,6 +79,82 @@
                     app:cardCornerRadius="5dp">
 
                     <LinearLayout
+                        android:id="@+id/ll_admin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/red_accent">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_centerInParent="true"
+                                    android:tint="@color/white"
+                                    app:srcCompat="@drawable/ic_user"
+                                    tools:ignore="VectorDrawableCompat" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_totalAdmin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="monospace"
+                                    android:paddingStart="10dp"
+                                    android:text="0 Admin"
+                                    android:textColor="@color/black"
+                                    android:textSize="30sp"
+                                    android:textStyle="bold"
+                                    tools:ignore="RtlSymmetry" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="monospace"
+                                    android:paddingStart="10dp"
+                                    android:text="@string/terdaftar"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="normal"
+                                    tools:ignore="RtlSymmetry" />
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    app:cardCornerRadius="5dp">
+
+                    <LinearLayout
                         android:id="@+id/ll_ibu"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -176,7 +252,8 @@
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
                                     android:layout_centerInParent="true"
-                                    app:srcCompat="@drawable/add" />
+                                    app:srcCompat="@drawable/add"
+                                    tools:ignore="VectorDrawableCompat" />
                             </RelativeLayout>
                         </LinearLayout>
 
