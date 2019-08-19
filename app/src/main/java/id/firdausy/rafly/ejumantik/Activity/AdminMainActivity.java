@@ -25,7 +25,7 @@ import id.firdausy.rafly.ejumantik.FragmentAdmin.HitungAbjAdminFragment;
 import id.firdausy.rafly.ejumantik.FragmentAdmin.InputDataAdminFragment;
 import id.firdausy.rafly.ejumantik.FragmentAdmin.LihatDataAdminFragment;
 import id.firdausy.rafly.ejumantik.FragmentAdmin.PencegahanAdminFragment;
-import id.firdausy.rafly.ejumantik.FragmentAdmin.TambahAdminKaderFragment;
+import id.firdausy.rafly.ejumantik.FragmentAdmin.TambahAdminFragment;
 import id.firdausy.rafly.ejumantik.Helper.Bantuan;
 import id.firdausy.rafly.ejumantik.R;
 import id.firdausy.rafly.ejumantik.Universal.LoginActivity;
@@ -129,7 +129,7 @@ public class AdminMainActivity extends AppCompatActivity
                     .commit();
         } else if (id == R.id.action_tambahAdminKader) {
             FT.replace(R.id.fl_content,
-                    new TambahAdminKaderFragment(),
+                    new TambahAdminFragment(),
                     "action_tambahAdminKader")
                     .commit();
         } else if (id == R.id.action_ubahPassword) {
