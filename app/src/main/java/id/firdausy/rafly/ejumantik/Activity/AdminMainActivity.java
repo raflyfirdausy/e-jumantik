@@ -38,6 +38,7 @@ public class AdminMainActivity extends AppCompatActivity
     private Context context = AdminMainActivity.this;
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference;
+    //CEK DOANG 22 MEI 2020
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
